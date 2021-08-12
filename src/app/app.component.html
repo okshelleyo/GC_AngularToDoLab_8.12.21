@@ -1,0 +1,32 @@
+<body>
+
+ <div class="todo-section">
+ <h3 class="header">To Do List</h3>
+ <p>A place to store your tasks</p>
+
+ <!-- Display List of Tasks & Complete Button -->
+ <ol >
+    <li *ngFor="let item of toDoList" [ngClass]="item.completed ? 'text-decoration: strike-through' : 'text-decoration: none'" >
+     {{ item.task }}
+     <app-task *ngIf='!item.completed'></app-task>
+    </li>
+ </ol>
+
+ <!-- Form to add a new Task -->
+
+ <form #newTaskForm='ngForm'>
+
+  <input class="input-add"
+  id= "newTaskFromForm"
+  name = "newTaskFromForm"
+  placeholder="Add your To-Do"
+  ngModel
+  >
+
+<br />
+
+<button class="btn-add" (click)="addTask(newTaskForm)">Add Task</button>
+
+</form>
+</div>
+</body>

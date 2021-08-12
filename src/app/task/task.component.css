@@ -1,0 +1,15 @@
+
+.btn-complete {
+  border: #ff1493;
+  color: #ff1493;
+  border-radius: 12px;
+  padding: 3px 10px;
+  text-align: center;
+  font-size: 14px;
+  position: relative;
+
+}
+
+.btn-complete:hover {
+background-color: #aaa;
+}
