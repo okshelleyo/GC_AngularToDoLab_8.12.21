@@ -48,3 +48,6 @@ ol li {
   width: 100%;
 }
 
+.strike-task {
+  text-decoration: line-through;
+}

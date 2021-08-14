@@ -9,7 +9,7 @@
 
  <ol >
     <li *ngFor="let item of parentToDoList" [class.strike-task]="item.completed==true">
-     {{ item.task }} {{ item.completed }}
+     {{ item.task }} 
 
      <app-task *ngIf='item.completed==false'></app-task>
 
