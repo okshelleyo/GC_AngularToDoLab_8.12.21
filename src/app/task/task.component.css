@@ -13,3 +13,7 @@
 .btn-complete:hover {
 background-color: #aaa;
 }
+
+.strike-task {
+  text-decoration: line-through;
+}

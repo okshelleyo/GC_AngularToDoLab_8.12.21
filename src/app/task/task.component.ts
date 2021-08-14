@@ -10,28 +10,20 @@ import { Output, EventEmitter } from '@angular/core';
 })
 export class TaskComponent implements OnInit {
 
-  @Input() task: string = "";
-  @Input() completed: boolean = true;
-  @Output() removeTask = new EventEmitter<string>();
-  @Input() toDoList: ToDo[] = [];
+  taskCompleted = false;
 
   constructor() { }
 
-  taskCompleted = true;
-  editable = true;
 
   ngOnInit(): void {
   }
 
   completeTask (){
-
-    this.taskCompleted = false;
+    this.taskCompleted = true;
   }
 
 
 
-  // deleteTask(){
-  // this.toDoList.splice(this.toDoList.indexOf(, 1)
-  // }
+
 
 }

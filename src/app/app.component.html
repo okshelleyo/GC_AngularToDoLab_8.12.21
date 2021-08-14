@@ -4,13 +4,19 @@
  <h3 class="header">To Do List</h3>
  <p>A place to store your tasks</p>
 
+
  <!-- Display List of Tasks & Complete Button -->
+
  <ol >
-    <li *ngFor="let item of toDoList" [ngClass]="item.completed ? 'text-decoration: strike-through' : 'text-decoration: none'" >
-     {{ item.task }}
-     <app-task *ngIf='!item.completed'></app-task>
+    <li *ngFor="let item of parentToDoList" [class.strike-task]="item.completed==true">
+     {{ item.task }} {{ item.completed }}
+
+     <app-task *ngIf='item.completed==false'></app-task>
+
     </li>
  </ol>
+
+
 
  <!-- Form to add a new Task -->
 

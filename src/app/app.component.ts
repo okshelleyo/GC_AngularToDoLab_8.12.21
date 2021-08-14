@@ -13,11 +13,11 @@ export class AppComponent
   title = 'AngularLab';
   newTask: string = "";
   completed: boolean = false;
-
+  myClass = "";
 
   constructor () {}
 
-  toDoList: ToDo[] = [
+  parentToDoList: ToDo[] = [
 
     {task: 'Research Angular',
     completed: false },
@@ -25,7 +25,7 @@ export class AppComponent
     completed: true },
     {task: 'Fix Movie API Lab',
     completed: false },
-    {task: 'Anuglar Lab',
+    {task: 'Angular Lab',
     completed: false },
     {task: 'Job Search Prep',
     completed: false },
@@ -36,16 +36,17 @@ export class AppComponent
 
   ]
 
-
   addTask (newTaskForm: NgForm) {
 
     this.newTask = newTaskForm.form.value.newTaskFromForm;
 
-    this.toDoList.push({
+    this.parentToDoList.push({
       task: this.newTask,
       completed: false
     });
   }
+
+
 
 
 }
